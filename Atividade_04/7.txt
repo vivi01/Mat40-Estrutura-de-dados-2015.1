@@ -1,0 +1,2 @@
+letra d, pois um vez que o vetor começa no indice zero e pti é um ponteiro para o vetor
+a posição 1 corresponde ao segundo elemento do vetor, ou seja, 10;

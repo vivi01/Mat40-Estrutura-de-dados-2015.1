@@ -1,0 +1,2 @@
+Um ponteiro é uma variável que guarda o endereço de outra variável. O ponteiro  um tipo de dado que serve para indicar, ou armazenar,
+ um endereço de memória.

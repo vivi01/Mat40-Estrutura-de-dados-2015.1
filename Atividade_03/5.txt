@@ -1,0 +1,4 @@
+*pnum
+pnum = &num
+
+letra d

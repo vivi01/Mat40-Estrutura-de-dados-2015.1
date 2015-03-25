@@ -1,0 +1,9 @@
+int x, *px;
+x = 5;
+px = &x;
+*px = x;
+int divide, aux;
+aux =  *px;
+divide = aux / 5; 
+printf("O valor da divisão eh: %d", divide);
+

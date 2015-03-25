@@ -1,0 +1,4 @@
+int i,j
+int *p, *q;
+
+letra  d,f,

@@ -1,0 +1,2 @@
+letra e é falsa, porqueo ponteiro pti quando é declarado aponta para o endereço de i e
+não para seu conteúdo (valor), para que fosse igual a 1o teria que fazer: *pti = 10;

@@ -1,0 +1,4 @@
+int v[30]
+
+não, porque como o indice do vetor começa em zero, ele vai de 0 a 29. Nesta instrução ele irá 
+tentar acessar o indice 30 do vetor que não existe.
