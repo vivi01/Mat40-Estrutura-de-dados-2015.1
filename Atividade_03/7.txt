@@ -1,0 +1,2 @@
+*pj = &j. Ao adicionar está instrução estamos colocando pj para apontar para o endereço de memória onde está armazenado a variável j e ao colocar
+*pj = 3, ele estará colocando o valor 3 no endereço de memória de j;

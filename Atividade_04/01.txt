@@ -1,0 +1,3 @@
+vet[10]
+Resposta: letra c, porque o indíce do vetor começa em zero, então o vetor no indice dois corresponde
+ao terceiro elemento.

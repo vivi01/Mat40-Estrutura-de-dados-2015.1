@@ -1,0 +1,2 @@
+letra d, porque uma vez que pf é um ponteiro para float e está recebendo o endereço de f,
+para a leitura dos dados deve-se usar obrigatoriamente o endereço de f no scanf;

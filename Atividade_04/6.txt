@@ -1,0 +1,4 @@
+int i,j;
+int *pi, *pj;
+
+Resposta: letra h, pois como i foi declarado como int, ele não pode receber um ponteiro.
