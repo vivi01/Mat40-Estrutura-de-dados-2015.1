@@ -4,4 +4,4 @@ matrix[3][4] = 1    2    3     4
 
 letra e, pois a resposta é 2.
 
-Não entendi porque?
+Não entendi por que deu essa resposta. Perguntar ao professor.
