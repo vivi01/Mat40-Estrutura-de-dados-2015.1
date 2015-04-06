@@ -1,2 +1,2 @@
 px = &x
-Porque, uma vez que px aponta para o endereço de x, para acessar seu conteúdo basta usar o * que serve para acessar o conteúdo do endereço.
+Não, Porque é necessário que seja usado o comando scanf ("%d",&x), para pegar o endereço de x;

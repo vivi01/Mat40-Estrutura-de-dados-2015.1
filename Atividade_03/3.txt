@@ -1,1 +1,3 @@
-letra a
+letra d
+*indica
+indica = &ch

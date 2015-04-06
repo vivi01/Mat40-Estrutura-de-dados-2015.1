@@ -1,4 +1,4 @@
 int i,j
 int *p, *q;
 
-letra  d,f,
+letra b, d,f,g

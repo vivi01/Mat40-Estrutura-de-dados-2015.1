@@ -1,4 +1,4 @@
 *pnum
 pnum = &num
 
-letra d
+letras b e d
