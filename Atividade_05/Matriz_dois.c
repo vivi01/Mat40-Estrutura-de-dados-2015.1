@@ -121,7 +121,8 @@ Matriz* MatrizTransposta(Matriz* matr)
  	printf("%d\n",Acessa(m,1,2));
  	printf("%d\n",Acessa(m,1,3));
  	printf("%d\n",Coluna(mat));
-  QuadradaSimetrica(mat;
-  MatrizTransposta	Libera(mat);	    
+    QuadradaSimetrica(mat);
+    MatrizTransposta(mat);
+    Libera(mat);	    
  }
 
