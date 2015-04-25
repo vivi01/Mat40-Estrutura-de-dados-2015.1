@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include "Matriz.h"
 
-//Implementação de matriz usando vetores simples
+//Implementação de matriz usando vetores de ponteiros
 struct matriz{ int** vetor;
          int linha;
          int coluna;
