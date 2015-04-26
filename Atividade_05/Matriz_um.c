@@ -11,7 +11,7 @@ struct matriz{ int* vetor;
 Matriz* Cria(int lin, int colun)
 {
 	Matriz* mat = (Matriz*) malloc(sizeof(Matriz)); // alocando a estrutura na memória
-	if(mat==null)
+	if(mat==NULL)
 	{
 		printf("Não há espaco disponivel para alocar a estrutura! \n");
 		exit(1);
@@ -33,7 +33,7 @@ int Acessa(Matriz* matr, int lin,int colun)
 {
 	int indice; // variavel auxiliar para  o indice do vetor
 	//Verificando se existe elemento na linha e coluna especificada
-	if(lin>=matr->linha || lin<0 || colun<0 || colun>=matr->coluna)
+	if(lin >= matr->linha || lin<0 || colun<0 || colun >= matr->coluna)
 	{
 		printf("Posicao solicitada não existe! Por gentileza escolher outra.\n");
 		exit(1);
@@ -43,7 +43,7 @@ int Acessa(Matriz* matr, int lin,int colun)
 }
 void Atribui(Matriz* matr, int lin,int colun, int valor)
 {
-		int indice; // variavel auxiliar para  o indice do vetor
+	int indice; // variavel auxiliar para  o indice do vetor
 	//Verificando se existe elemento na linha e coluna especificada
 	if(lin>=matr->linha || lin<0 || colun<0 || colun>=matr->coluna)
 	{
@@ -67,21 +67,21 @@ void QuadradaSimetrica (Matriz* matr)
 {
 	int k,l,i,j;
 	int sime=1;
-	if (mat->linha!=mat->coluna) 
+	if (matr->linha != matr->coluna) 
 	{
 		sime=0;
-	 printf("Matriz nao simetrica\n");
+	  printf("Matriz nao simetrica\n");
 	}
 	else
 	{
 		printf("Matriz Quadrada\n"); 
-		for (i=0; (i<mat->linha)&&(sime==1); i++)
+		for (i=0; (i<matr->linha)&&(sime==1); i++)
 		{
-		 	for (j=0; (j<mat->coluna)&&(sime==1); j++) 
+		 	for (j=0; (j<matr->coluna)&&(sime==1); j++) 
 		 	{
-				k=i*mat->coluna+j;
-				l=j*mat->coluna+i;
-				if (mat->dado[k] !=mat->dado[l]) 
+				k=i*matr->coluna+j;
+				l=j*matr->coluna+i;
+				if (matr->vetor[k] != matr->vetor[l]) 
 					sime=0;
 			}
 		}
@@ -95,13 +95,13 @@ void QuadradaSimetrica (Matriz* matr)
 Matriz* MatrizTransposta(Matriz* matr)
 {
 	int i,j,k;
-    int trans[mat->coluna][mat->linha];
-	for (j = 0; j < mat->linha;j++)
+    int trans[matr->coluna][matr->linha];
+	for (j = 0; j < matr->linha;j++)
 	{
-		for (i = 0; i < mat->coluna; i++)
+		for (i = 0; i < matr->coluna; i++)
 		{
-			k=i*mat->coluna+j;
-			trans[j][i] = mat->dado[k];            
+			k=i*matr->coluna+j;
+			trans[j][i] = matr->vetor[k];            
         }
     } 
 	printf("Transposta feita");      
@@ -116,9 +116,10 @@ Matriz* MatrizTransposta(Matriz* matr)
 	Atribui(mat,0,1,5);
 	Atribui(mat,1,0,6);
 	Atribui(mat,1,1,10);
- 	printf("%d\n",Acessa(m,1,1));
- 	printf("%d\n",Acessa(m,1,2));
- 	printf("%d\n",Acessa(m,1,3));
+ 	printf("%d\n",Acessa(mat,0,1));
+ 	printf("%d\n",Acessa(mat,0,0));
+ 	printf("%d\n",Acessa(mat,1,0));
+ 	printf("%d\n",Acessa(mat,1,1));
  	printf("%d\n",Coluna(mat));
 	QuadradaSimetrica(mat);
 	MatrizTransposta(mat);	
