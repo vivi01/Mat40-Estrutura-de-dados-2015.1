@@ -75,7 +75,7 @@ void QuadradaSimetrica (Matriz* matr)
 	else
 	{
 		printf("Matriz Quadrada\n"); 
-		for (i=0; (i<matr->linha)&&(sime==1); i++)
+		for (i=0; (i<matr->linha) && (sime==1); i++)
 		{
 		 	for (j=0; (j<matr->coluna)&&(sime==1); j++) 
 		 	{
@@ -104,8 +104,8 @@ Matriz* MatrizTransposta(Matriz* matr)
 			trans[j][i] = matr->vetor[k];            
         }
     } 
-	printf("Transposta feita");      
-	return matr;           
+	printf("Transposta feita \n");      
+	return matr;     
 }
 
  main()
@@ -122,7 +122,7 @@ Matriz* MatrizTransposta(Matriz* matr)
  	printf("%d\n",Acessa(mat,1,1));
  	printf("%d\n",Coluna(mat));
 	QuadradaSimetrica(mat);
-	MatrizTransposta(mat);	
+	printf("%d\n", MatrizTransposta(mat));		
 	Libera(mat);	    
  }
 
