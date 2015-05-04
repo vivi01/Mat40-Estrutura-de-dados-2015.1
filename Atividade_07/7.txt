@@ -1,0 +1,1 @@
+Não, pois o return traz a struct e não o valor que está armazenado nela

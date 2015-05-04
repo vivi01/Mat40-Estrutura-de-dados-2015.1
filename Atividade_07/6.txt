@@ -17,4 +17,18 @@ void insereListaCircular (Lista2* l, int v, int k)
    for (aux=l; k>1; aux=aux->prox, k--);
 
 }
-// Função para remover uma lista circular duplamente encadeada 
+// remove um elemento de uma lista circular duplamente encadeada 
+remover(Lista2* l, int x)
+{Lista2* aux = busca(l,dado) ;
+ if (aux  == NULL)
+    return l;
+   // retira elemento do encadeamento 
+  if (l == aux ) 
+  l = aux->prox;
+  else
+     aux->ant->prox = aux->prox;
+  if (aux->prox != NULL) 
+      aux->prox->ant = aux->ant;
+  free(aux);
+  return l;
+}

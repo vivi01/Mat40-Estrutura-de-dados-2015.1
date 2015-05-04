@@ -1,0 +1,1 @@
+Esta função esta transformando em NULL as variaveis no final da lista duplamente encadeada

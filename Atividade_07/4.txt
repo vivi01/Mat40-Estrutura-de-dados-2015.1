@@ -1,5 +1,11 @@
 a) // Função para transformar uma lista simplesmente encadeada em um lista circular
-void TornaCircular(Lista* l)
-{
-
+tornacircular(){
+      Lista* inicio;
+      Lista* fim;
+      inicio=raiz;  
+      while(raiz!=NULL) 
+         raiz=raiz->prox;
+      fim=raiz;
+      fim->prox=inicio;
 }
+b)//
