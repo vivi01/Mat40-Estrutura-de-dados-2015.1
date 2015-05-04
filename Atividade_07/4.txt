@@ -1,0 +1,5 @@
+a) // Função para transformar uma lista simplesmente encadeada em um lista circular
+void TornaCircular(Lista* l)
+{
+
+}

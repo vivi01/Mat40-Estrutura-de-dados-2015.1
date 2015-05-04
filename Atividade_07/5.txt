@@ -1,0 +1,57 @@
+struct lista2 {
+ int info;
+ struct lista2*ant;
+ struct lista* prox;
+};
+typedef struct  lista2 Lista2;
+a) // Insere elementos em uma lista duplamente encadeada
+Lista2* insereDados(Lista2* l, int dado)
+{
+  Lista2* novoDado = (Lista2*) malloc(sizeof(Lista));
+  novoDado->info = dado;
+  novoDado->ant = NULL;
+  novoDado->prox = l;
+
+if ( l != NULL)
+  l->ant = novoDado;
+ return novoDado;
+}
+b) // Buscar um dado qualquer na lista
+Lista2* busca (Lista2* l, int dado)
+{
+  Lista2* aux;
+  for( aux = l; aux != NULL; aux->prox)
+  if (aux->dado == dado)
+     return aux;
+ return NULL; // não achou o dado
+}
+
+c) // Remover elementos da lista
+ Lista2* removeDados(Lista2* l, int dado)
+{
+ Lista2* aux = busca(l,dado) ;
+ if (aux  == NULL)
+    return l;
+   // retira elemento do encadeamento 
+  if (l == aux ) 
+  l = aux->prox;
+  else
+     aux->ant->prox = aux->prox;
+  if (aux->prox != NULL) 
+      aux->prox->ant = aux->ant;
+  free(aux);
+  return l;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

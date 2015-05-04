@@ -1,0 +1,98 @@
+2-
+a) void inicializa()
+{
+   int i;
+  for (i=0; i<MAX; i++)
+  tab[i] = NULL;
+}
+b) void preenche (int i)
+{
+if (tab[i]==NULL)
+tab[i] = (PAluno)malloc(sizeof(Aluno));
+printf("Entre com o nome:");
+scanf(" %s", tab[i]->nome);
+printf("Entre com a matricula:");
+scanf("%d", tab[i]->mat);
+printf("Entre com o endereco:");
+scanf(" %s", tab[i]->end);
+printf("Entre com o telefone:");
+scanf(" %s", tab[i]->tel);
+}
+c)
+void remove(int i)
+{
+ if(tab[i] != NULL)
+{
+    free(tab[i]);
+    tab[i] = NULL;
+}
+
+d) void consulta(int i)
+{
+  if(tab[i] != NULL)
+  {
+     printf("Nome:  %s\n", tab[i]->nome);
+     printf("Matricula:  %d\n", tab[i]->mat);
+     printf("Endereco:  %s\n", tab[i]->end);
+     printf("Telefone:  %s\n", tab[i]->tel);		
+}
+   else
+     printf("Nao existe aluno cadastrado nesta posicao!");
+}	
+}
+e)
+void imprimeAlunos()
+{
+   int i;
+  for(i = 0; i<Max; i++)
+  consulta[i]];
+}
+g)
+void inicializa(pAluno Tabela)
+{
+	int i;
+	for (i=0; i<MAX; i++)
+	Tabela[i] = NULL;
+}
+
+void preenche (pAluno Tabela,int i)
+{
+	if (Tabela[i] == NULL)
+	 	tab[i] = (PAluno*)malloc(sizeof(PAluno));
+	printf("Digite o nome do aluno: \n");
+	scanf("%s", tab[i]->nome);
+	printf("Digite a matricula do aluno: \n");
+	scanf("%d", tab[i]->mat);
+	printf("Digite o endereco do aluno: \n");
+	scanf("%s", tab[i]->end);
+	printf("Digite o telefone do aluno: \n");
+	scanf("%s", tab[i]->tel);
+}
+
+void removerAluno(pAluno Tabela, int i)
+{
+	if(Tabela[i] != NULL)
+	{
+		free(Tabela[i]);
+		Tabela[i] = NULL;
+	}	
+}
+
+void consulta(pAluno Tabela, int i)
+{
+	if(Tabela[i] != NULL)
+	{
+		printf("Nome:  %s\n", Tabela[MAX]->nome);
+		printf("Matricula:  %d\n", tab[i]->mat);
+		printf("Endereco:  %s\n", tab[i]->end);
+		printf("Telefone:  %s\n", tab[i]->tel);		
+	}
+	else
+	 printf("Nao existe aluno cadastrado nesta posicao!");
+}
+void imprimeAlunos(pAluno Tabela)
+{
+	int i;
+	for(i = 0; i<MAX; i++)
+	consulta(i);
+}

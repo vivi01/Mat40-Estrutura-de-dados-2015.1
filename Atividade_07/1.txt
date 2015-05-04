@@ -1,0 +1,82 @@
+a) // função para inicializar uma lista vazia
+Lista*  iniciaLista()
+{
+   return NULL;  
+}
+b) // inserir elementos numa lista
+Lista* insereElementos( Lista* l,int dado)
+{
+  Lista* elemento= (Lista*)  malloc(sizeof(Lista));
+  elemento->info = dado;
+  elemento->prox = l;
+  return elemento;
+}
+c) // função para percorrer os elementos da lista
+void percorreElementosLista( Lista* l)
+{
+   Lista* aux; // variável auxiliar para percorrer a lista 
+   for(aux =l; aux =! NULL; aux -> prox)
+      printf(“dado= %d\n”, p->info);
+}
+d) // verifica se a lista esta vazia
+bool listaVazia(Lista* l)
+{
+  if(l == NULL)
+   return true;
+  else
+ return false; 
+}
+e) // função para buscar dados na lista
+Lista* buscarDadosLista(Lista* l, int dado)
+{
+ Lista* aux;
+ for(aux = l; aux != NULL; aux->prox)  
+    if ( aux->info == dado)
+        return aux;
+   else 
+    return NULL; 
+}
+f) // Função que retira um elemento da lista.
+Lista * removeElemento(Lista* l, int dado)
+{
+ Lista * elemAnt == NULL; // guarda o elemento anterior
+ Lista * aux = l;
+ // procura elemento na lista, guardando anterior 
+ while (aux != NULL && aux->info != dado)
+ {
+   elemAnt = aux;
+  aux = aux->prox;
+}
+// verifica se achou o dado
+ if(aux == NULL)
+  return l;
+/* retira elemento */
+if (ant == NULL) {
+/* retira elemento do inicio */
+l = p->prox;
+}
+else {
+/* retira elemento do meio da lista */
+ant->prox = p->prox;
+}
+free(p);
+return l;
+}
+g)  // Função para liberar a lista
+void liberaLista(Lista* l)
+{
+Lista* p = l;
+while (p != NULL) {
+Lista* t = p->prox; /* guarda referência para o próximo elemento
+*/
+free(p); /* libera a memória apontada por p */
+p = t; /* faz p apontar para o próximo */
+}
+}
+
+
+
+
+
+
+

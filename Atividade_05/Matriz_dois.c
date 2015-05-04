@@ -121,6 +121,7 @@ main()
  	printf("%d\n",Acessa(mat,0,0));
  	printf("%d\n",Acessa(mat,1,0));
  	printf("%d\n",Acessa(mat,1,1));
+ 	printf("%d\n",Linha(mat));
  	printf("%d\n",Coluna(mat));
 	QuadradaSimetrica(mat);
 	MatrizTransposta(mat);	

@@ -1,0 +1,47 @@
+1-
+a) Declare uma variável do tipo ponto.
+struct ponto p;
+
+b) Use scanf para solicitar valores para a coordenada x e y da variável que criou e imprima na tela.
+printf("Digite as coordenadas do ponto");
+scanf("%f%f", &pont.x,&pont.y);
+printf("Os pontos digitados foram: %f%f", pont.x,pont.y);
+
+c) crie duas funções. Uma para capturar os valores de (x,y) e outra para imprimir
+void  CapturaPonto(struct ponto p)
+{
+  printf("Digite as coordenadas do ponto: \n");
+  scanf("%.2f%.2f", &p.x,&p.y);
+}
+void ImprimePonto(struct ponto p)
+{
+  printf("Os pontos digitados foram: %.2f, %.2f", p.x,p.y);
+}
+d) Crie um ponteiro para estrutura.
+struct ponto* pont;
+e) Faça o ponteiro apontar para estrutura declarada em a.
+pont = &p;
+
+f) Crie duas funções. Uma para capturar os valores de (x,y) e outra para imprimir.
+ (obs: Passe a estrutura por referência).
+void  CapturaPonto(struct ponto* p)
+{
+  printf("Digite as coordenadas do ponto: \n");
+  scanf("%.2f%.2f", &p->x,&p->y);
+}
+void ImprimePonto(struct ponto* p)
+{
+  printf("Os pontos digitados foram: %.2f, %.2f", p->x,p->y);
+}
+g) Quando a estrtura é passada por valor é feita uma cópia dos dados na memória, o que faz com
+que seja necessário mais espaço, já quando a estrutura é passada por referência, não se fa uma 
+cópia apenas aponta para um endereço de memória.
+
+h) float distancia (struct ponto *p, struct ponto *q)
+{
+    float d;
+     d = sqrt(pow((q->x - p->x),2) + pow((q->y - p->y),2));
+    return d;	
+}
+
+
