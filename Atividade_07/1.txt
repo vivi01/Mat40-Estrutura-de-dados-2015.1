@@ -1,4 +1,4 @@
-a) // função para inicializar uma lista vazia
+a) // funÃ§Ã£o para inicializar uma lista vazia
 Lista*  iniciaLista()
 {
    return NULL;  
@@ -11,12 +11,13 @@ Lista* insereElementos( Lista* l,int dado)
   elemento->prox = l;
   return elemento;
 }
-c) // função para percorrer os elementos da lista
+c) // funÃ§Ã£o para percorrer os elementos da lista
 void percorreElementosLista( Lista* l)
 {
-   Lista* aux; // variável auxiliar para percorrer a lista 
+   Lista* aux; // variÃ¡vel auxiliar para percorrer a lista 
    for(aux =l; aux =! NULL; aux -> prox)
-      printf(“dado= %d\n”, p->info);
+      printf(â€œdado= %d\nâ€, p->info);
+
 }
 d) // verifica se a lista esta vazia
 bool listaVazia(Lista* l)
@@ -26,7 +27,7 @@ bool listaVazia(Lista* l)
   else
  return false; 
 }
-e) // função para buscar dados na lista
+e) // funÃ§Ã£o para buscar dados na lista
 Lista* buscarDadosLista(Lista* l, int dado)
 {
  Lista* aux;
@@ -36,14 +37,15 @@ Lista* buscarDadosLista(Lista* l, int dado)
    else 
     return NULL; 
 }
-f) // Função que retira um elemento da lista.
+f) // FunÃ§Ã£o que retira um elemento da lista.
 Lista * removeElemento(Lista* l, int dado)
 {
  Lista * elemAnt == NULL; // guarda o elemento anterior
  Lista * aux = l;
  // procura elemento na lista, guardando anterior 
  while (aux != NULL && aux->info != dado)
- {
+ {
+
    elemAnt = aux;
   aux = aux->prox;
 }
@@ -62,19 +64,101 @@ ant->prox = p->prox;
 free(p);
 return l;
 }
-g)  // Função para liberar a lista
+g)  // FunÃ§Ã£o para liberar a lista
 void liberaLista(Lista* l)
 {
 Lista* p = l;
 while (p != NULL) {
-Lista* t = p->prox; /* guarda referência para o próximo elemento
+Lista* t = p->prox; /* guarda referÃªncia para o prÃ³ximo elemento
 */
-free(p); /* libera a memória apontada por p */
-p = t; /* faz p apontar para o próximo */
+free(p); /* libera a memÃ³ria apontada por p */
+p = t; /* faz p apontar para o prÃ³ximo */
 }
 }
 
+// Aula 05/05
 
+#include <stdio.h>
+#include <stdlib.h>
+
+struct lista {
+	int info;
+	struct lista* prox;
+};
+typedef struct lista Lista;
+
+Lista* inicializa ()
+{
+return  NULL;
+}
+//inserÃ§Ã£o no inicio
+Lista* insere(Lista* l, int dado)
+{
+	Lista* aux = (Lista*) malloc(sizeof(Lista));
+	if(aux == NULL)
+	  printf("Sem espaco!");
+	else
+	{	  
+	aux->info = dado;
+	aux->prox = l;
+	return aux;
+	}
+}
+
+void percorre(Lista* l)
+{
+	Lista* aux = l;
+	while(aux != NULL)
+	 {
+	 printf("%d \n",aux->info);
+	 aux = aux->prox;	  	  
+	}
+}
+int listaVazia(Lista* l)
+{
+	if (l == NULL)
+	 return 1;
+	 else 
+	 return 0;
+}
+Lista* busca(Lista* l,int dado)
+{
+	Lista* aux = l;
+	while(aux != NULL)
+	{
+		if(aux->info == dado)
+		{
+			printf("Elemento Encontrado! \n");
+	        return aux;			
+		}			
+		else
+		{ 
+		aux = aux->prox;
+			
+		}
+				   	
+   }	 
+	 printf("Elemento nao esta na lista! \n");	
+	 return NULL;
+
+}
+
+int main()
+{
+int ret;
+Lista* list;
+list = inicializa();
+list = insere(list,10);
+list = insere(list,20);
+list =insere(list,30);
+list = insere(list,40);
+percorre(list);
+ret = listaVazia(list);
+printf("%d \n",ret);
+list = busca (list,10);
+list = busca(list,15);
+return 0;
+}
 
 
 
