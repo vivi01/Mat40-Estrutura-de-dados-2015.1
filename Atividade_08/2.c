@@ -7,7 +7,7 @@ struct no{ float info;
 
 struct pilha { No* prim;
 };
-//função para criar uma pilha e inicializar a  lista como vazia
+//funÃ§Ã£o para criar uma pilha e inicializar a  lista como vazia
 Pilha* cria()
 {
 	No* l == NULL;
@@ -17,7 +17,7 @@ Pilha* cria()
 	novo->prim = NULL;	
 	return novo;
 }
-// função auxiliar para inserir um elemento no inicio da lista
+// funÃ§Ã£o auxiliar para inserir um elemento no inicio da lista
 No* insereInicio(No* l, float f)
 {
 	No* novo = (No*)malloc(sizeof(No));
@@ -27,11 +27,11 @@ No* insereInicio(No* l, float f)
 		novo->prox = l;
 		return novo;
 }
-// função auxiliar para remover um elemento no inicio da lista
+// funÃ§Ã£o auxiliar para remover um elemento no inicio da lista
 No removeInicio(No* l)
 {
 	if(l == NULL)
-			printf("Lista vazia!!Não há dados para serem removidos");
+			printf("Lista vazia!!NÃ£o hÃ¡ dados para serem removidos");
 			No* novo = l->prox;
 			free(l);
 			return novo;	
@@ -40,7 +40,7 @@ void insere(Pilha*p, float f)
 {
 	p->prim = insereInicio(p->primi,f);
 }
-//função para remover um elemento de  uma pilha
+//funÃ§Ã£o para remover um elemento de  uma pilha
 float removePilha(Pilha* p)
 {
 	float v;
@@ -53,7 +53,7 @@ float removePilha(Pilha* p)
 	p->prim = removeInicio(p->prim);
 	return v;
 }
-//função para verificar se uma pilha esta vazia
+//funÃ§Ã£o para verificar se uma pilha esta vazia
 int vazia(Pilha* p)
 {
 		if (p-prim == NULL)
@@ -61,7 +61,7 @@ int vazia(Pilha* p)
 	 else
 	 return 0;
 }
-//função para liberar a pilha
+//funÃ§Ã£o para liberar a pilha
 void liberaPilha(Pilha* p)
 {
 	No* novo = p->prim;
@@ -73,7 +73,7 @@ void liberaPilha(Pilha* p)
 	}
 	free(p);
 }
-// função para imprimir os elementos da pilha
+// funÃ§Ã£o para imprimir os elementos da pilha
 void imprime(Pilha* p)
 {
 	No* q;
@@ -81,3 +81,35 @@ void imprime(Pilha* p)
 	printf("%f\n",q->info);	
 }
 
+
+//Atividade 9
+#include<stdio.h>
+#include<stdlib.h>
+#include "calc.h"
+#include "pilha.h"
+
+struct calc{ 
+char f[21];
+Pilha* p;
+};
+
+Calc* cria_calc(char* c)
+{
+	Calc* novo = (Calc*)malloc(sizeof(Calc));
+	if(novo == NULL)
+		printf("Memoria insuficiente!!");
+	strcps(novo->f) = c;
+	novo->p = cria_calc(c);	
+	return novo;
+}
+void operando(Calc* c,float v);
+void operador(Calc* c, float op);
+void libera_calc(Calc* c);
+int main()
+{
+	Calc* c;
+	char* f =.2f;
+	c = cria_calc(f);
+	
+	return 0;
+}
