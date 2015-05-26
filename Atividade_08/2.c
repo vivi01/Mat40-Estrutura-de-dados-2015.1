@@ -98,7 +98,7 @@ Calc* cria_calc(char* c)
 	Calc* novo = (Calc*)malloc(sizeof(Calc));
 	if(novo == NULL)
 		printf("Memoria insuficiente!!");
-	strcps(novo->f) = c;
+	strcpy(novo->f,c) = c;
 	novo->p = cria_calc(c);	
 	return novo;
 }
