@@ -3,7 +3,7 @@
 #include <string.h>
 #include<"pilha.h">
 #include<"calc.h">
-
+//Calculadora posfixa usando pilha
 struct calc {
 char f[21]; 
 Pilha* p; 
