@@ -80,36 +80,3 @@ void imprime(Pilha* p)
 	for (q=p->prim; q!=NULL; q=q->prox)
 	printf("%f\n",q->info);	
 }
-
-
-//Atividade 9
-#include<stdio.h>
-#include<stdlib.h>
-#include "calc.h"
-#include "pilha.h"
-
-struct calc{ 
-char f[21];
-Pilha* p;
-};
-
-Calc* cria_calc(char* c)
-{
-	Calc* novo = (Calc*)malloc(sizeof(Calc));
-	if(novo == NULL)
-		printf("Memoria insuficiente!!");
-	strcpy(novo->f,c) = c;
-	novo->p = cria_calc(c);	
-	return novo;
-}
-void operando(Calc* c,float v);
-void operador(Calc* c, float op);
-void libera_calc(Calc* c);
-int main()
-{
-	Calc* c;
-	char* f =.2f;
-	c = cria_calc(f);
-	
-	return 0;
-}
