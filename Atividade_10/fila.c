@@ -17,7 +17,7 @@ return f;
 void insere (Fila* f, float v)
 {
 if (incr(f->fim) == f->ini) { // fila cheia: capacidade esgotada
-*/
+
 printf("Capacidade da fila estourou.\n");
 exit(1); // aborta programa *
 }
