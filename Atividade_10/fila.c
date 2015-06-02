@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<fila.h>
 
+//Implementação de fila usando vetor
 #define N 100
 struct fila {
 int ini, fim;
