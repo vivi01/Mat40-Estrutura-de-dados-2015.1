@@ -50,3 +50,10 @@ void libera (Fila* f)
 {
   free(f);
 }
+//função para imprimir
+void imprime (Fila* f)
+{
+  int i;
+  for (i=f->ini; i!=f->fim; i=incr(i))
+  printf("%f\n",f->vet[i]);
+}
