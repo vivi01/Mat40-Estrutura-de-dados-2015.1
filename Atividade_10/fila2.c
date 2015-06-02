@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<fila.h>
 
+//Implementação de fila usando lista
 struct no {
 float info;
 struct no* prox;
