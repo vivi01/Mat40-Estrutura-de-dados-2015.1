@@ -1,3 +1,5 @@
+//Interface para implementação de fila 
+
 typedef struct fila Fila;
 typedef struct no No;
 
