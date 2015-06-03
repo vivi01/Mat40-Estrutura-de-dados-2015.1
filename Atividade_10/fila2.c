@@ -1,52 +1,48 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<fila.h>
-
-//ImplementaÃ§Ã£o de fila usando lista
-struct no {
-float infoÍ¾
-struct no* proxÍ¾
-}Í¾
-
-struct fila {
-No* iniÍ¾
-No* fimÍ¾
-}Í¾
-
+//Função para criar uma fila
 Fila* cria (void)
 {
   Fila* f = (Fila*) malloc(sizeof(Fila));
-  f->ini = f->fim = NULL;
+  f->ini = NULL;
+	 f->fim = NULL;
   return f;
 }
-
+// função para inserir na fila
 void insere (Fila* f, float v)
 {
-  f->fim = ins_fim(f->fim,v);
-  if (f->ini==NULL) /* fila antes vazia? */
-  f->ini = f->fim;
+	No* novo = (No*) malloc(sizeof(No));
+	novo->info = v;
+	novo->prox = NULL;
+	if (!vazia(f)) 
+	  f->fim->prox = novo;
+	else
+	f->ini = novo;
+	f->fim = novo;
 }
-
+// função para remover o primeiro elemento da fila
 float retira (Fila* f)
 {
+	No* l;
   float v;
   if (vazia(f))
   {
     printf("Fila vazia.\n");
     exit(1); /* aborta programa */
   }
-v = f->ini->info;
-f->ini = ret_ini(f->ini);
-if (f->ini == NULL) /* fila ficou vazia? */
-f->fim = NULL;
-return v;
+  l = f->ini;
+  v = l->info;
+  f->ini = l->prox;
+  if (f->ini == NULL) 
+    f->fim = NULL;
+  free(l);
+	return v;
 }
 
+// função para verificar se a fila esta vazia
 int vazia (Fila* f)
 {
   return (f->ini==NULL);
 }
-
+//função para desalocar a fila
 void libera (Fila* f)
 {
   No* q = f->ini;
@@ -58,10 +54,11 @@ void libera (Fila* f)
   }
   free(f);
 }
-//funÃ§Ã£o para imprimir
+//função para imprimir
 void imprime (Fila* f)
 {
   No* q;
   for (q=f->ini; q!=NULL; q=q->prox)
-  printf("%f\n",q->info);
+  printf("%.2f\n",q->info);
 }
+

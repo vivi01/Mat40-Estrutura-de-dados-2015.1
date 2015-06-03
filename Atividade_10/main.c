@@ -5,15 +5,16 @@
 
 int main (void)
 {
-  Fila* f = cria();
-  insere(f,45.0);
-  insere(f,30.8);
-  insere(f,91.7);
-  insere(f,74.9);
-  printf("Primeiro elemento: %f\n", retira(f));
-  printf("Segundo elemento: %f\n", retira(f));
-  printf("Configuracao da fila:\n");
-  imprime(f);
-  libera(f);
-  return 0;
+	int v;
+	Fila* teste = cria();
+	v = vazia(teste);
+	printf("%d \n", v);
+	insere(teste,5.5);
+	insere(teste,6.0);
+	insere(teste,7.8);
+	insere(teste,9.25);
+	imprime(teste);
+	retira(teste);
+	imprime(teste);	
+	return 0;
 }
