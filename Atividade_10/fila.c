@@ -3,13 +3,13 @@
 #include<fila.h>
 #define N 100
 
-//Implementação de fila usando vetor
+//ImplementaÃ§Ã£o de fila usando vetor
 struct fila {
 int ini, fim;
 float vet[N];
 };
 
-//Função para criar uma fila
+//FunÃ§Ã£o para criar uma fila
 Fila* cria (void)
 {
 	Fila* f = (Fila*)malloc(sizeof(Fila)); 
@@ -17,10 +17,10 @@ Fila* cria (void)
 	f->fim = 0;
 	return f;
 }
-//Função para inserção  na fila
+//FunÃ§Ã£o para inserÃ§Ã£o  na fila
 void insere (Fila* f, float v)
 {
-	if(f->fim == NUM)
+	if(f->fim == N)
 	{	
 	  printf("Fila cheia! Nao e possivel inserir \n");
   }
@@ -30,13 +30,13 @@ void insere (Fila* f, float v)
 	  f->fim++;
 	}	
 }
-// função para verificar se a fila esta vazia
+// funÃ§Ã£o para verificar se a fila esta vazia
 
 int vazia (Fila* f)
 {
   return (f->ini == f->fim);
 }
-// função para retirar um elemento da fila
+// funÃ§Ã£o para retirar um elemento da fila
 float retira (Fila* f)
 {
   float v;
@@ -49,13 +49,13 @@ float retira (Fila* f)
   f->ini++;
   return v;
 }
-// função para desalocar da fila
+// funÃ§Ã£o para desalocar da fila
 
 void libera (Fila* f)
 {
   free(f);
 }
-//função para imprimir
+//funÃ§Ã£o para imprimir
 void imprime (Fila* f)
 {
   int i;
